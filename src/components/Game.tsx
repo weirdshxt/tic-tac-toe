@@ -185,7 +185,6 @@ const Game: React.FC = () => {
   useEffect(() => {
     if (isDraw) {
       setTieCount((prev) => prev + 1);
-      setRoundsPlayed((prev) => prev + 1);
     }
   }, [isDraw]);
 
