@@ -203,9 +203,11 @@ const Game: React.FC = () => {
           ? computerSymbol
           : "tie";
 
+      const winnerName = overallWinnerSymbol === playerSymbol ? playerName : (vsComputer ? "Computer" : (secondPlayerName || "Player"));
       navigate("/result", {
         state: {
           winnerSymbol: overallWinnerSymbol,
+          winnerName,
           playerName,
           playerSymbol,
           secondPlayerName,
